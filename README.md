@@ -18,3 +18,4 @@ MatBo.csv contains the matrix B in scenario 3.
 
 
 ToClustAdjacencyNutr.csv, ToClustAuthorDataNutr.csv and ToClustPaperDataNutr.csv contain the matrices B, X and Y in the application.
+In the actual computations, the attributes used in the clustering are years_of_activity, avg_citation	and avg_papers in ToClustAuthorDataNutr.csv and citedby-count and	n-references in ToClustPaperDataNutr.csv
