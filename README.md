@@ -7,8 +7,14 @@ The file fcmdd_ent_bipartite.r contains the R code for the optimization of the o
 The other files contain the data used in the simulation studies and the application.
 
 MatX.csv contains the matrix X in all the 3 simulation scenarios.
+
 MatY.csv contains the matrix Y in scenarios 1 and 3.
+
 MatYn.csv contains the matrix Y in scenario 2.
+
 MatB2.csv contains the matrix B in scenarios 1 and 2.
+
 MatBo.csv contains the matrix B in scenario 3.
 
+
+ToClustAdjacencyNutr.csv, ToClustAuthorDataNutr.csv and ToClustPaperDataNutr.csv contain the matrices B, X and Y in the application.
