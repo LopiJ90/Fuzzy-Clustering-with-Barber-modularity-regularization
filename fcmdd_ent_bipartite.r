@@ -167,3 +167,25 @@ start_u <- function(n, k) {
   U <- (1 - sqrt(2) / 2) * U_u + sqrt(2) / 2 * U_r
   return(U)
 }
+
+
+xie_beni_fcmdd21 <- function(fit, B) {
+  c=fit$k
+  n <- nrow(fit$U)
+  m<- nrow(fit$V)
+  cx=(n-c)
+  cy=(m-c)
+  a=sum(fit$U* fit$d_icx)/cx+sum(fit$V*fit$d_icy)/cy
+  d_icx <- fit$d_icx
+  d_icy <- fit$d_icy
+  medoidsx <- unname(fit$medoidsx)
+  medoidsy <- unname(fit$medoidsy)
+  dist_medoidsx <- as.dist(d_icx[medoidsx,])
+  dist_medoidsy <- as.dist(d_icy[medoidsy,])
+  b=min(dist_medoidsx)+min(dist_medoidsy)
+  bb=b/(c)
+  J <- sum(fit$U* B%*%fit$V)
+  J=J/(c)
+  index=(bb+J)/(a)
+  return(index)
+}
