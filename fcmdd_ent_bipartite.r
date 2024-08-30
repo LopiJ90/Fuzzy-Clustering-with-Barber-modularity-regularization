@@ -182,10 +182,8 @@ xie_beni_fcmdd21 <- function(fit, B) {
   medoidsy <- unname(fit$medoidsy)
   dist_medoidsx <- as.dist(d_icx[medoidsx,])
   dist_medoidsy <- as.dist(d_icy[medoidsy,])
-  b=min(dist_medoidsx)+min(dist_medoidsy)
-  bb=b/(c)
-  J <- sum(fit$U* B%*%fit$V)
-  J=J/(c)
-  index=(bb+J)/(a)
+  bb=min(dist_medoidsx)+min(dist_medoidsy)/c
+  J <- sum(fit$U* B%*%fit$V)/c
+  index=(bb+J)/a
   return(index)
 }
